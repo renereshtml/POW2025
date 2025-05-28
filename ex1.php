@@ -8,25 +8,26 @@
 <body>
     <?php
 
-    $a = $_POST['n1'] ;
-    $b = $_POST['n2'] ;
-    $o = $_POST['op'];
+    $x = $_POST['n1'];
+    $y = $_POST['n2'];
+    $op = $_POST['op'];
 
 
-    if ($o == "soma") $r = $a + $b;
-    if ($o == "sub") $r = $a - $b;
-    if ($o == "mult") $r = $a * $b;
-    if ($o == "div") 
+    if ($op == "soma") $r = $x + $y;
+    if ($op == "sub") $r = $x - $y;
+    if ($op == "mult") $r = $x * $y;
+    if ($op == "div") 
     {
-        if ($b == 0) 
+        if ($y == 0) 
         {
             echo "<p>Erro: divisão por zero.</p>";
             return;
         }
-        $r = $a / $b;
+        $r = $x / $y;
     }
 
     echo "<br>O resultado é: ".$r;
+    echo '<br><a href="ex1list.html" id="btn">Voltar</>';
 
 ?>
 </body>

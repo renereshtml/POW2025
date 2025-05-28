@@ -6,17 +6,25 @@
     <title>Calculadora</title>
 </head>
 <body>
+
     <form action="ex1.php" method="post">
-        <h3><b>Escolha a opcao desejada</b></h3>
-        <hr>
-        <input type="radio" name="op" value="soma" checked> Somar
-        <input type="radio" name="op" value="sub"> Subtrair
-        <input type="radio" name="op" value="div"> Dividir
-        <input type="radio" name="op" value="mult"> Multiplicar
-        <br><br>
-        Numero 1: <input type="text" name="n1"><br>
-        Numero 2: <input type="text" name="n2"><br><br>
+        <fieldset>
+            <legend>Operador</legend>
+            <h3><b>Escolha a opcao desejada</b></h3>
+            <input type="radio" name="op" value="soma" > Somar
+            <input type="radio" name="op" value="sub"> Subtrair
+            <input type="radio" name="op" value="div"> Dividir
+            <input type="radio" name="op" value="mult"> Multiplicar
+            <br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Entrada de numeros</legend>
+            Numero 1: <input type="text" name="n1"><br>
+            Numero 2: <input type="text" name="n2"><br><br>
+        </fieldset>
+
         <input type="submit" name="env" value="Enviar">
+        <input type="reset" name="env" value="Apagar">
     </form>
 
 
