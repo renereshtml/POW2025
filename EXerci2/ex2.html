@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+     <h1>Exercício 2</h1>
+
+
+     
+    <form action="ex2.php" method="post">
+        <fieldset>
+            <legend>Informações</legend>
+            <label for="nm">Nome:</label>
+            <input type="text" name="nm" id="nm" placeholder="Digite seu nome">
+           <br><br>
+           
+            <textarea name="tar"  id="textar" placeholder="Digite sua mensagem aqui..." cols="20" rows="10"></textarea>
+
+            <br><br>
+            <label for=""> Escolha</label> <br>
+           <input type="checkbox" name="atividades[]" value="CN" id="cine">Cinema
+           <input type="checkbox" name="atividades[]" value="AC" id="acad">Academia
+           <input type="checkbox" name="atividades[]" value="ESP" id="ep">Esporte
+           
+           <br><br>
+            
+           <label for="esc">Escolha as opções</label> <br>
+           <input type="radio" name="op" value="masc" > Masculino
+            <input type="radio" name="op" value="fm"> Feminino
+            <input type="radio" name="op" value="out"> Não sei
+            <br><br>
+
+            <label for="">Estado:</label> <br>
+
+          <select name="slc" id="qlqr" required >
+            <option value="" disabled selected hidden>Estados</option>
+            <option name="est" value="sp">SP</option>
+            <option name="est" value="rj">RJ</option>
+            <option name="est" value="es">ES</option>
+            <option name="est" value="mg">MG</option>
+
+          </select>
+          <br><br>
+
+        <input type="submit" name="env" value="Enviar"> 
+        <input type="reset" name="ap" value="apagar">
+
+        </fieldset>
+
+        
+    </form>
+
+</body>
+</html>

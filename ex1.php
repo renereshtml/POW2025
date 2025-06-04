@@ -16,7 +16,7 @@
     if ($op == "soma") $r = $x + $y;
     if ($op == "sub") $r = $x - $y;
     if ($op == "mult") $r = $x * $y;
-    if ($op == "div") 
+    if ($op == "div") $r=$x / $y;
     {
         if ($y == 0) 
         {
