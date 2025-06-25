@@ -4,22 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        a {
+            text-decoration: none;
+            color: #2196F3;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        div {
+            margin-top: 20px;
+        }
+    </style>
+    
 </head>
 <body>
+    
+<?php
+include 'conex.php';
 
-    <?php
-    include ('conex.php');
-    $n = $_POST['nome_usuario'];
-    $e = $_POST['email_usuario'];
-    $f = $_POST['fone_usuario'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome=$_POST['nome'] ?? '';
+    $email=$_POST['email'] ?? '';
+    $idade=$_POST['idade'] ?? '';
+    $curso=$_POST['curso'] ?? '';
+    if ($nome && $email && $idade && $curso)
+    {
 
-    echo "<p>Nome do usuario: ".$n."<br>";
-    echo "E-mail: ".$e."<br>";
-    echo "Telefone: ".$f."</p>";
+        echo "<h1>Dados Recebidos</h1><br>";
+        echo "Nome: $nome <br>";
+        echo "Email: $email <br>";
+        echo "Idade: $idade <br>";
+        echo "Curso: $curso <br>";
+    } else {
+        echo "Todos os Campos São Obrigatórios";
+    }
 
 
-    echo '<br><br><a href="cdas_user.html" id="btn">Novo Cadastro</>';
-    ?>
+    $sql = "INSERT INTO usuario (nome, email, idade, curso) VALUES ('$nome', '$email', '$idade', '$curso')";
+
+    if (mysqli_query($con, $sql)) {
+        echo "Novo registro criado com sucesso";
+    } else {
+        echo "Erro: " . $sql . "<br>" . mysqli_error($con);
+    }
+
+    mysqli_close($con);
+}
+?>
+<div>
+    <a href="index.html">Menu Principal</a>
+</div>
+
 
 </body>
 </html>

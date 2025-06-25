@@ -4,13 +4,17 @@ $hostname = "localhost";
 $database = "cadastro";
 $username = "root";
 $password = "";
-$porta = 3306;
 
-$con =new mysqli($hostname, $username, $password,$database,$porta);
+
+$con =new mysqli($hostname, $username, $password,$database);
  
-if($con) echo "conectado";
+//if($con) echo "conectado";
 
-else echo "error 404"
+//else echo "error 404"
 // mysql_select_db($database, $con);
+
+if ($con->connect_error) {
+  die("Conexão falhou: " . $conn->connect_error);
+}
 ?>
 
