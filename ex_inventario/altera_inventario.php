@@ -1,4 +1,12 @@
-<?php
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar</title>
+</head>
+<body>
+    <?php
 include "conexao.php";
 
 $id = $_GET["id"];
@@ -25,3 +33,9 @@ $row = $res->fetch_assoc();
   Sistema Operacional: <input type="text" name="so" value="<?= $row["sistema_operacional"] ?>"><br>
   <input type="submit" value="Alterar">
 </form>
+<br>
+<li><a href="index.php">Ínicio</a></li>
+</body>
+</html>
+
+
