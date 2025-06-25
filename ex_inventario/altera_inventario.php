@@ -26,6 +26,7 @@ $row = $res->fetch_assoc();
   Processador: <input type="text" name="proc" value="<?= $row["processador"] ?>"><br>
   Possui Placa de Vídeo: 
   <select name="plv">
+  <option value="" disabled selected hidden>Possui?</option>
     <option value="1" <?= $row["possui_placa_video"] ? "selected" : "" ?>>Sim</option>
     <option value="0" <?= !$row["possui_placa_video"] ? "selected" : "" ?>>Não</option>
   </select><br>
