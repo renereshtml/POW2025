@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro Fluxo</title>
+</head>
+<body>
+  <h2>Cadastro do fluxo</h2>
+
+  <fieldset>
+  <form action="cadastro_flx.php" method="post">
+    Data: <input type="date" name="data"  required><br>
+   Tipo: <input type="radio" name="rd" value="entrada"required>Entrada
+   <input type="radio" name="rd" value="saida"required>Saída<br>
+   Valor: <input type="number" name="vl" required><br>
+    Histórico: <input type="text" name="hist" required><br>
+    
+    Cheque? 
+    <select name="plv">
+        <option value="" disabled selected hidden>Deseja?</option>
+      <option value="1">Sim</option>
+      <option value="0">Não</option>
+    </select><br>
+   </fieldset>
+    <input type="submit" value="Cadastrar">
+  </form>
+  <li><a href="index.html">Ínicio</a></li>
+</body>
+</html>
